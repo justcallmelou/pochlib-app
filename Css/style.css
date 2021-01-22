@@ -1,0 +1,373 @@
+/*# sourceMappingURL=style.css.map */
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #e2e4e3, #d4d6d4, #c7c8c5, #babab6, #aeaca8, #aba9a5, #a9a5a2, #a6a29f, #aca8a6, #b1afad, #b7b5b4, #bdbcbb);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#myDiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+}
+
+#myBooks {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resultsContent,
+#poch-list-content-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: auto;
+}
+
+.trashEltContainer,
+.bookMarkContainer {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+}
+
+.resultsSearchDiv,
+.resultsPochList {
+    display: flex;
+    flex-direction: column;
+    justify-content: centers;
+    width: 350px;
+    margin-top: 20 px;
+    margin-bottom: 20px;
+    margin-block-end: 20px;
+    margin-block-start: 20px;
+    text-align: left;
+    color: #252625;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 800px;
+    width: 550px;
+    background-color: #e2e4e3;
+    border: 3px solid #a3a4a4;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Redressed', cursive, 'Times New Roman', Times, serif;
+}
+
+.title {
+    font-family: 'Dr Sugiyama', cursive;
+    font-size: 6.0em;
+    color: #252625;
+    position: relative;
+    text-align: center;
+    top: 85px;
+}
+
+.h2 {
+    font-family: 'Arvo', serif, 'Times New Roman', Times, serif;
+    font-size: 1.8em;
+    color: #252625;
+    text-align: center;
+    position: relative;
+    top: 8px;
+    left: auto;
+    right: auto;
+    margin-bottom: 25px;
+}
+
+.h3 {
+    font-family: 'Yusei Magic', sans-serif;
+    color: #252625;
+    font-size: 1.6em;
+    text-align: left;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: #252625;
+    font-size: 1.2em;
+    text-align: left;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-family: 'Arvo', serif;
+    font-size: 1.3em;
+    color: #252625;
+    text-align: left;
+    position: relative;
+    top: auto;
+    bottom: auto;
+}
+
+#img {
+    width: 299px;
+    height: 300px;
+    vertical-align: middle;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 20px;
+    bottom: 30px;
+}
+
+#trash-img,
+#bookmark-img {
+    height: 39px;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+#addBookButton {
+    min-width: 210px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: linear-gradient(90deg, #979189 0%, #86837d 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px #d4d4d4;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+}
+
+#addBookButton::before {
+    content: '';
+    border-radius: 100px;
+    min-width: calc(200px + 12px);
+    min-height: calc(30px + 12px);
+    border: 6px solid #bdbcbb;
+    box-shadow: 0 0 60px#86837d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+
+#addBookButton:hover,
+.button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+
+#addBookButton:hover::before,
+#addBookButton:focus::before {
+    opacity: 1;
+}
+
+#addBookButton::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    border: 6px solid #e2e4e3;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+#addBookButton:hover::after,
+#addBookButton:focus::after {
+    animation: none;
+    display: none;
+}
+
+#search-button,
+#cancel-button {
+    display: inline-block;
+    border: 0;
+    background-color: #e2e4e3;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 30px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    outline: none;
+    font-size: 15px;
+    border-radius: 30px;
+    color: #252625;
+    margin-top: 5px;
+}
+
+.input {
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+    line-height: 30px;
+    padding: 0 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    border-radius: 30px;
+    color: #252625;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+@media screen and (max-width: 1024px) {
+    .title {
+        position: relative;
+        font-size: 6em;
+        color: #252625;
+    }
+    .h2 {
+        font-size: 1.6em;
+        top: auto;
+    }
+    .h3 {
+        font-size: 1.5em;
+        text-align: left;
+        position: relative;
+        margin-bottom: 15px;
+    }
+    .h4 {
+        font-weight: normal;
+        font-size: 1em;
+        text-align: left;
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .description {
+        font-family: 'Arvo', serif;
+        font-size: 1em;
+        text-align: left;
+        position: relative;
+        top: auto;
+        bottom: auto;
+    }
+    .input {
+        height: auto;
+        margin-bottom: auto;
+    }
+    .resultsSearchDiv,
+    .resultsPochList {
+        height: auto;
+    }
+    #myDiv {
+        position: static;
+        margin-bottom: 15px;
+    }
+    #img {
+        width: auto;
+        height: 300px;
+        vertical-align: middle;
+        position: static;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    #resultsContent,
+    #poch-list-content-div {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 640px) and (orientation: portrait) {
+    .title {
+        position: relative;
+        font-size: 4em;
+        color: #252625;
+        margin-top: 25px;
+        top: 25px;
+    }
+    .h2 {
+        font-size: 1.3em;
+        bottom: auto;
+    }
+    .h3 {
+        font-family: 'Yusei Magic', sans-serif;
+        font-size: 1.1em;
+        text-align: left;
+        position: relative;
+        margin-bottom: 15px;
+    }
+    .h4 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 0.9em;
+        text-align: left;
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .description {
+        font-family: 'Arvo', serif;
+        font-size: 1em;
+        text-align: left;
+        position: relative;
+        top: auto;
+        bottom: auto;
+    }
+    .input {
+        height: auto;
+        width: auto;
+        margin-bottom: auto;
+    }
+    .resultsSearchDiv,
+    .resultsPochList {
+        height: auto;
+    }
+    #myDiv {
+        position: static;
+        margin-bottom: 30px;
+    }
+    #search-button,
+    #cancel-button {
+        width: auto;
+        height: auto;
+    }
+    #img {
+        width: auto;
+        height: 300px;
+        vertical-align: middle;
+        position: static;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    #trash-img,
+    #bookmark-img {
+        height: 29px;
+        margin-left: auto;
+        margin-top: 10px;
+    }
+    #resultsContent,
+    #poch-list-content-div {
+        height: auto;
+    }
+}

@@ -175,6 +175,7 @@ function cancelSearch() {
     hideSearchForm();
     clearPochlist();
     clearResults();
+    loadPochList();
 }
 
 // Hide results 
